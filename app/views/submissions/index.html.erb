@@ -1,4 +1,7 @@
 <% @submissions.each do |submission| %>
   <p><%= submission.names %></p>
   <p><%= submission.additional_information %></p>
+  <% if submission.file %>
+    <p><%= submission.file.url %> </p>
+  <% end %>
 <% end %>
